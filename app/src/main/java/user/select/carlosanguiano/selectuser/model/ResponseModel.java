@@ -2,108 +2,104 @@ package user.select.carlosanguiano.selectuser.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class ResponseModel {
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
-	@SerializedName("website")
-	private String website;
+public class ResponseModel  implements Serializable{
 
-	@SerializedName("address")
-	private Address address;
+    @SerializedName("website")
+    private String website;
+//
+//    @SerializedName("address")
+//    private List<Address> address = new ArrayList<>();
 
-	@SerializedName("phone")
-	private String phone;
+    @SerializedName("phone")
+    private String phone;
 
-	@SerializedName("name")
-	private String name;
+    @SerializedName("name")
+    private String name;
+//
+//    @SerializedName("company")
+//    private List<Company> company = new ArrayList<>();
 
-	@SerializedName("company")
-	private Company company;
+    /*@SerializedName("data")
+    public List<Datum> data = new ArrayList<>();*/
 
-	@SerializedName("id")
-	private int id;
+    @SerializedName("id")
+    private int id;
 
-	@SerializedName("email")
-	private String email;
+    @SerializedName("email")
+    private String email;
 
-	@SerializedName("username")
-	private String username;
+    @SerializedName("username")
+    private String username;
 
-	public void setWebsite(String website){
-		this.website = website;
-	}
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
-	public String getWebsite(){
-		return website;
-	}
+    public String getPhone() {
+        return phone;
+    }
 
-	public void setAddress(Address address){
-		this.address = address;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public Address getAddress(){
-		return address;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setPhone(String phone){
-		this.phone = phone;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public String getPhone(){
-		return phone;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setName(String name){
-		this.name = name;
-	}
+    public String getEmail() {
+        return email;
+    }
 
-	public String getName(){
-		return name;
-	}
+}
 
-	public void setCompany(Company company){
-		this.company = company;
-	}
+//class Address implements Serializable{
+//
+//    @SerializedName("zipcode")
+//    private String zipcode;
+//
+//    @SerializedName("geo")
+//    private Geo geo;
+//
+//    @SerializedName("suite")
+//    private String suite;
+//
+//    @SerializedName("city")
+//    private String city;
+//
+//    @SerializedName("street")
+//    private String street;
+//}
 
-	public Company getCompany(){
-		return company;
-	}
+//class Company implements Serializable{
+//
+//    @SerializedName("bs")
+//    private String bs;
+//
+//    @SerializedName("catchPhrase")
+//    private String catchPhrase;
+//
+//    @SerializedName("name")
+//    private String name;
+//}
 
-	public void setId(int id){
-		this.id = id;
-	}
+class Geo implements Serializable{
 
-	public int getId(){
-		return id;
-	}
+    @SerializedName("lng")
+    private String lng;
 
-	public void setEmail(String email){
-		this.email = email;
-	}
-
-	public String getEmail(){
-		return email;
-	}
-
-	public void setUsername(String username){
-		this.username = username;
-	}
-
-	public String getUsername(){
-		return username;
-	}
-
-	@Override
- 	public String toString(){
-		return 
-			"ResponseModel{" +
-			"website = '" + website + '\'' + 
-			",address = '" + address + '\'' + 
-			",phone = '" + phone + '\'' + 
-			",name = '" + name + '\'' + 
-			",company = '" + company + '\'' + 
-			",id = '" + id + '\'' + 
-			",email = '" + email + '\'' + 
-			",username = '" + username + '\'' + 
-			"}";
-		}
+    @SerializedName("lat")
+    private String lat;
 }
