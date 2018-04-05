@@ -1,0 +1,1 @@
+package user.select.carlosanguiano.selectuser.mainactivity;import user.select.carlosanguiano.selectuser.base.MvpPresenter;/** * Created by Carlos Anguiano on 4/4/18. * For more info contact: c.joseanguiano@gmail.com */interface MainMvpPresenter<V extends MainMvpView> extends MvpPresenter<V> {    void decideNextActivity();}

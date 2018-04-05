@@ -1,0 +1,1 @@
+package user.select.carlosanguiano.selectuser.secondactivity;import user.select.carlosanguiano.selectuser.base.MvpPresenter;/** * Created by Carlos Anguiano on 4/4/18. * For more info contact: c.joseanguiano@gmail.com */public interface SecondMvpPresenter<V extends SecondMvpView> extends MvpPresenter<V> {    void startLogin(String login);}
